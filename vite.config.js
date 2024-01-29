@@ -1,9 +1,25 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import babel from '@rollup/plugin-babel';
+import react from '@vitejs/plugin-react';
 import pkg from './package.json';
 
 export default defineConfig({
+  plugins: [
+    react({
+      babel: {
+        presets: [
+          ['@babel/preset-env', { modules: false }],
+          '@babel/preset-react',
+        ],
+        plugins: [
+          '@babel/plugin-proposal-class-properties',
+          '@babel/plugin-proposal-optional-chaining',
+          ['transform-react-remove-prop-types', { removeImport: true }],
+        ],
+        minified: true,
+      },
+    }),
+  ],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.tsx'),
@@ -12,13 +28,6 @@ export default defineConfig({
     },
     rollupOptions: {
       external: Object.keys(pkg.peerDependencies),
-      plugins: [
-        babel({
-          babelHelpers: 'bundled',
-          exclude: 'node_modules/**',
-          extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        }),
-      ],
     },
   },
 });
