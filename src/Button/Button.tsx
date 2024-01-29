@@ -1,12 +1,12 @@
-import React from "react";
-import "./Button.css";
+import React from 'react';
+import './Button.css';
 
-export type ButtonProps = React.ComponentProps<"button"> & {
-  kind?: "primary" | "secondary";
- }
+export type ButtonProps = React.ComponentProps<'button'> & {
+  kind?: 'primary' | 'secondary';
+};
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ kind = "primary", ...props }, ref) => {
-      return <button data-button={`kind:${kind}`} ref={ref} {...props} />;
-  },
+  ({ kind = 'primary', ...props }, ref) => {
+    return <button data-button={`kind:${kind}`} ref={ref} {...props} />;
+  }
 );
