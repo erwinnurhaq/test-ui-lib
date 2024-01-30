@@ -28,6 +28,7 @@ export default defineConfig({
     dts({ include: ['src/lib'] }),
   ],
   build: {
+    emptyOutDir: true,
     copyPublicDir: false,
     lib: {
       entry: resolve(__dirname, 'src/lib/index.tsx'),
@@ -36,7 +37,7 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: Object.keys(pkg.peerDependencies),
+      external: ['react', /^react-icons/],
       input: Object.fromEntries(
         glob
           .sync('src/lib/**/*.{ts,tsx}', {
