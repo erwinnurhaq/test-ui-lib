@@ -7,6 +7,7 @@ import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import pkg from './package.json';
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react({
@@ -24,12 +25,12 @@ export default defineConfig({
       },
     }),
     libInjectCss(),
-    dts({ include: ['src'] }),
+    dts({ include: ['src/lib'] }),
   ],
   build: {
     copyPublicDir: false,
     lib: {
-      entry: resolve(__dirname, 'src/index.tsx'),
+      entry: resolve(__dirname, 'src/lib/index.tsx'),
       name: pkg.name,
       formats: ['es', 'cjs'],
       fileName: (format) => `index.${format}.js`,
@@ -38,11 +39,16 @@ export default defineConfig({
       external: Object.keys(pkg.peerDependencies),
       input: Object.fromEntries(
         glob
-          .sync('src/**/*.{ts,tsx}', { ignore: 'src/**/*.stories.tsx' })
+          .sync('src/lib/**/*.{ts,tsx}', {
+            ignore: ['src/lib/**/*.stories.tsx'],
+          })
           .map((file) => [
             // The name of the entry point
             // src/nested/foo.ts becomes nested/foo
-            relative('src', file.slice(0, file.length - extname(file).length)),
+            relative(
+              'src/lib',
+              file.slice(0, file.length - extname(file).length)
+            ),
             // The absolute path to the entry file
             // src/nested/foo.ts becomes /project/src/nested/foo.ts
             fileURLToPath(new URL(file, import.meta.url)),

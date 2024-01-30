@@ -3,18 +3,23 @@
   "version": "1.0.1",
   "description": "",
   "private": false,
+  "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
   ],
   "sideEffects": [
     "**/*.css"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "build:lib": "vite build --config vite.config.lib.js"
+    "dev": "vite",
+    "build:lib": "tsc && vite build --config vite.config.lib.ts",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "keywords": [],
   "author": "erwinnurhaq",
@@ -24,11 +29,20 @@
     "@babel/plugin-proposal-optional-chaining": "7.21.0",
     "@babel/preset-env": "7.23.9",
     "@babel/preset-react": "7.23.3",
+    "@types/node": "20.11.10",
     "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "@typescript-eslint/eslint-plugin": "6.20.0",
+    "@typescript-eslint/parser": "6.20.0",
     "@vitejs/plugin-react": "4.2.1",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
+    "eslint": "8.56.0",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-refresh": "0.4.5",
     "glob": "10.3.10",
     "react": "17.0.2",
+    "react-dom": "17.0.2",
     "typescript": "5.3.3",
     "vite": "5.0.12",
     "vite-plugin-dts": "3.7.2",
