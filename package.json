@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "private": false,
-  "main": "dist/index.umd.js",
+  "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "build": "vite build && tsc"
+    "build:lib": "vite build --config vite.config.lib.js"
   },
   "keywords": [],
   "author": "erwinnurhaq",
@@ -24,9 +27,12 @@
     "@types/react": "18.2.48",
     "@vitejs/plugin-react": "4.2.1",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
+    "glob": "10.3.10",
     "react": "17.0.2",
     "typescript": "5.3.3",
-    "vite": "5.0.12"
+    "vite": "5.0.12",
+    "vite-plugin-dts": "3.7.2",
+    "vite-plugin-lib-inject-css": "1.3.0"
   },
   "peerDependencies": {
     "react": ">=17"
