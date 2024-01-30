@@ -7,5 +7,5 @@ ReactDOM.render(
     {/* // Mount Component Here */}
     {/* <Button>Test</Button> */}
   </>,
-  document.getElementById('root')!
+  document.getElementById('root')
 );
