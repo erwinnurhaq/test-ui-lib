@@ -12,10 +12,7 @@ export default defineConfig({
   plugins: [
     react({
       babel: {
-        presets: [
-          ['@babel/preset-env', { modules: false }],
-          '@babel/preset-react',
-        ],
+        presets: [['@babel/preset-env', { modules: false }], '@babel/preset-react'],
         plugins: [
           '@babel/plugin-proposal-class-properties',
           '@babel/plugin-proposal-optional-chaining',
@@ -46,10 +43,7 @@ export default defineConfig({
           .map((file) => [
             // The name of the entry point
             // src/nested/foo.ts becomes nested/foo
-            relative(
-              'src/lib',
-              file.slice(0, file.length - extname(file).length)
-            ),
+            relative('src/lib', file.slice(0, file.length - extname(file).length)),
             // The absolute path to the entry file
             // src/nested/foo.ts becomes /project/src/nested/foo.ts
             fileURLToPath(new URL(file, import.meta.url)),

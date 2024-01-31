@@ -7,11 +7,7 @@ export type CardProps = {
   title: string;
 };
 
-export default function Card({
-  img,
-  title,
-  children,
-}: React.PropsWithChildren<CardProps>) {
+export default function Card({ img, title, children }: React.PropsWithChildren<CardProps>) {
   return (
     <article data-card="">
       <img src={img.src} alt={img.alt} />
