@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.css';
+import { FaAndroid } from 'react-icons/fa';
 
 export type CardProps = {
   img: { src: string; alt: string };
@@ -16,6 +17,7 @@ export default function Card({
       <img src={img.src} alt={img.alt} />
       <h2>{title}</h2>
       {children}
+      <FaAndroid />
     </article>
   );
 }
