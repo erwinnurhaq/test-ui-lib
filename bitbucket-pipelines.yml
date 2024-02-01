@@ -1,0 +1,28 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:20.10.0
+
+definitions:
+  steps:
+    - step: &DeployPreviewSurge
+        name: Build and Deploy Preview to Surge
+        caches:
+          - node
+        script:
+          - npm install --global surge
+          - npm install
+          - npm run build:storybook
+          - cd storybook-static
+          - surge ./ --domain $BITBUCKET_COMMIT.surge.sh --token $SURGE_TOKEN
+
+pipelines:
+  branches:
+    'deploy-preview':
+      - step: *DeployPreviewSurge
+
+  pull-requests:
+    feature/*: #any branch with a feature prefix
+      - step: *DeployPreviewSurge

@@ -1,9 +1,8 @@
 {
-  "name": "lelele-ui-lib",
-  "version": "1.0.3",
-  "description": "",
+  "name": "prospace-ui",
+  "version": "1.9.6",
   "private": false,
-  "type": "module",
+  "description": "ProSpace UI - React Component Library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -15,19 +14,27 @@
   "sideEffects": [
     "**/*.css"
   ],
+  "license": "MIT",
   "scripts": {
     "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 0",
     "dev": "vite",
     "storybook": "storybook dev -p 6006",
+    "tsc": "tsc",
     "build:storybook": "storybook build",
-    "build:lib": "tsc && vite build --config vite.config.lib.ts",
+    "build:lib": "rm -rf dist && vite build --config vite.config.lib.ts && tsc --p ./tsconfig.lib.json && npm run build:css",
+    "build:css": "rm -rf dist/styles && npm run build:tailwindcss && npm run build:archivecss && npm run build:resetcss",
+    "build:tailwindcss": "cross-env NODE_ENV=production postcss ./src/lib/styles/index.css -o ./dist/styles/index.css",
+    "build:resetcss": "cross-env NODE_ENV=production postcss ./src/lib/styles/resets.css -o ./dist/styles/resets.css",
+    "build:archivecss": "cross-env NODE_ENV=production postcss ./src/lib/styles/archive.css -o ./dist/styles/archive.css",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prettier": "prettier --write --parser typescript '**/*.{ts,tsx}'"
   },
-  "keywords": [],
-  "author": "erwinnurhaq",
-  "license": "ISC",
+  "author": "prospace",
+  "engines" : { 
+    "npm" : ">=10",
+    "node" : ">=18"
+  },
   "lint-staged": {
     "*.{ts,tsx}": [
       "npm run prettier",
@@ -35,6 +42,9 @@
     ]
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.26",
+    "@fortawesome/free-solid-svg-icons": "5.12.0",
+    "@fortawesome/react-fontawesome": "0.1.8",
     "react-icons": "5.0.1"
   },
   "devDependencies": {
@@ -42,21 +52,23 @@
     "@babel/plugin-proposal-optional-chaining": "7.21.0",
     "@babel/preset-env": "7.23.9",
     "@babel/preset-react": "7.23.3",
-    "@storybook/addon-essentials": "7.6.10",
-    "@storybook/addon-interactions": "7.6.10",
-    "@storybook/addon-links": "7.6.10",
+    "@storybook/addon-essentials": "7.6.11",
+    "@storybook/addon-interactions": "7.6.11",
+    "@storybook/addon-links": "7.6.11",
     "@storybook/addon-onboarding": "1.0.11",
-    "@storybook/blocks": "7.6.10",
-    "@storybook/react": "7.6.10",
-    "@storybook/react-vite": "7.6.10",
-    "@storybook/test": "7.6.10",
+    "@storybook/blocks": "7.6.11",
+    "@storybook/react": "7.6.11",
+    "@storybook/react-vite": "7.6.11",
+    "@storybook/test": "7.6.11",
     "@types/node": "20.11.10",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
     "@typescript-eslint/eslint-plugin": "6.20.0",
     "@typescript-eslint/parser": "6.20.0",
     "@vitejs/plugin-react": "4.2.1",
+    "autoprefixer": "10.2.5",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
+    "cross-env": "7.0.3",
     "eslint": "8.56.0",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
@@ -65,15 +77,19 @@
     "glob": "10.3.10",
     "husky": "7.0.4",
     "lint-staged": "12.3.4",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "storybook": "7.6.10",
+    "postcss": "8.2.15",
+    "postcss-cli": "8.3.1",
+    "postcss-import": "14.0.1",
+    "prettier": "3.2.4",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "storybook": "7.6.11",
+    "tailwindcss": "2.0.4",
     "typescript": "5.3.3",
     "vite": "5.0.12",
-    "vite-plugin-dts": "3.7.2",
     "vite-plugin-lib-inject-css": "1.3.0"
   },
   "peerDependencies": {
-    "react": ">=17"
+    "react": ">=16"
   }
 }

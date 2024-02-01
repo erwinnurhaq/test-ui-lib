@@ -1,0 +1,63 @@
+.psui-badges {
+  display: inline;
+  position: relative;
+  padding: 3px 12px;
+  letter-spacing: 0.6px;
+  color: #345d7f;
+  vertical-align: baseline;
+  margin: 0 0.14285714em;
+}
+.psui-badges-blue {
+  background: #c1e6fe;
+}
+.psui-badges-cyan {
+  background: #aaf9e6;
+}
+.psui-badges-purple {
+  background: #eed3fe;
+}
+.psui-badges-orange {
+  background: #fed695;
+}
+.psui-badges-green {
+  background: #c9ef94;
+}
+.psui-badges-yellow {
+  background: #fce77e;
+}
+.psui-badges-red {
+  background: #ffd2dd;
+}
+.psui-badges-dark-green {
+  background: #06a903;
+  color: #ffffff;
+}
+.psui-badges-dark-red {
+  background: #d10318;
+  color: #ffffff;
+}
+.psui-badges-pill {
+  border-radius: 24px;
+}
+.psui-badges-rectangle {
+  border-radius: 4px;
+}
+.psui-badges-icon {
+  @apply psui-bg-ps-red-50;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  border: 2px solid;
+  border-radius: 50%;
+}
+.psui-badges-close:hover {
+  cursor: pointer;
+  @apply psui-bg-ps-red-70;
+}

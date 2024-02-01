@@ -1,0 +1,353 @@
+.psui-datepicker,
+.psui-date-range-picker,
+.psui-timepicker {
+  position: relative;
+}
+
+.psui-date-range-picker {
+  width: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+}
+
+.psui-date-range-picker--fluid {
+  width: 100%;
+  grid-gap: 10px;
+}
+
+.psui-timepicker--with-12-hour {
+  width: 150px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.psui-timepicker--fluid {
+  width: 100%;
+}
+
+.psui-timepicker-am-pm-select--with-label {
+  @apply psui-mt-5;
+}
+
+.psui-timepicker-am-pm-select--with-required {
+  @apply psui-mb-4;
+}
+
+.psui-date-range-picker-end-date-input-and-icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.psui-date-range-picker-icon {
+  @apply psui-h-5 psui-w-5 psui-text-ps-black-50;
+}
+
+.psui-date-range-picker-icon--empty-placeholder {
+  @apply psui-h-5 psui-w-5;
+}
+
+.psui-date-range-picker-icon--with-label {
+  @apply psui-mt-5;
+}
+
+.psui-date-range-picker-icon--with-required {
+  @apply psui-mb-5;
+}
+
+.psui-datepicker__wrapper,
+.psui-date-range-picker__wrapper,
+.psui-timepicker__wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+}
+
+.psui-datepicker-input,
+.psui-date-range-picker-input {
+  width: 100px;
+}
+
+.psui-timepicker-input {
+  width: 70px;
+}
+
+.psui-date-range-picker-input {
+  margin-right: 10px;
+}
+
+.psui-datepicker-input input,
+.psui-date-range-picker-input input,
+.psui-timepicker-input input {
+  caret-color: transparent;
+}
+
+.psui-datepicker-input--datepicker-showed input,
+.psui-date-range-picker-input--datepicker-showed input,
+.psui-timepicker-input--timepicker-showed input {
+  @apply psui-border-ps-yellow-50;
+}
+
+.psui-datepicker-input--with-icon {
+  width: 150px;
+}
+
+.psui-datepicker-input .psui-text-input-skeleton-label,
+.psui-datepicker-input .psui-text-input-label-container,
+.psui-datepicker-input .psui-text-input-required,
+.psui-date-range-picker-input .psui-text-input-skeleton-label,
+.psui-date-range-picker-input .psui-text-input-label-container,
+.psui-date-range-picker-input .psui-text-input-required,
+.psui-timepicker-input .psui-text-input-skeleton-label,
+.psui-timepicker-input .psui-text-input-label-container,
+.psui-timepicker-input .psui-text-input-required {
+  display: none;
+}
+
+.psui-datepicker-input .psui-text-input-skeleton,
+.psui-date-range-picker-input .psui-text-input-skeleton,
+.psui-timepicker-input .psui-text-input-skeleton {
+  margin-bottom: 0px;
+}
+
+.psui-datepicker-input--with-label .psui-text-input-label-container,
+.psui-date-range-picker-input--with-label .psui-text-input-label-container,
+.psui-timepicker-input--with-label .psui-text-input-label-container,
+.psui-datepicker-input--with-required .psui-text-input-required,
+.psui-date-range-picker-input--with-required .psui-text-input-required,
+.psui-timepicker-input--with-required .psui-text-input-required {
+  display: block;
+}
+
+.psui-datepicker__picker,
+.psui-date-range-picker__picker,
+.psui-timepicker__picker {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  min-width: 250px;
+  min-height: 215px;
+  background-color: white;
+  z-index: 9999;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.psui-timepicker__picker {
+  width: 150px;
+  height: 240px;
+  min-width: 100px;
+  min-height: 240px;
+  border: 1px solid transparent;
+  @apply psui-border-ps-black-30;
+}
+
+.psui-datepicker__picker--year-picker-active,
+.psui-date-range-picker__picker--year-active {
+  min-width: 200px;
+}
+
+/* date-item-picker, month-picker, year-picker  */
+.psui-datepicker__date-item-picker,
+.psui-datepicker__month-picker,
+.psui-datepicker__year-picker {
+  padding: 25px 30px;
+  padding-bottom: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.psui-datepicker__date-item-picker__header,
+.psui-datepicker__year-picker__header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.psui-datepicker__date-item-picker__header__month-year {
+  user-select: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: flex-start;
+}
+
+.psui-datepicker__date-item-picker__header__month-year__month-text {
+  justify-self: flex-end;
+  margin-right: 5px;
+}
+
+.psui-datepicker__date-item-picker__year-button,
+.psui-datepicker__month-picker__year-button,
+.psui-datepicker__year-picker__header__year-list-button {
+  display: block;
+  user-select: none;
+  margin: 0px auto;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  @apply psui-bg-ps-white-50;
+}
+
+.psui-datepicker__date-item-picker__year-button {
+  margin: 0px;
+  margin-left: 5px;
+}
+
+.psui-datepicker__year-picker__header__year-list-button {
+  background-color: transparent;
+}
+
+.psui-datepicker__date-item-picker__year-button:hover,
+.psui-datepicker__month-picker__year-button:hover {
+  cursor: pointer;
+  @apply psui-bg-ps-white-60;
+}
+
+.psui-datepicker__date-item-picker__day-item-container {
+  margin: 10px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  align-items: center;
+  justify-items: center;
+}
+
+.psui-datepicker__date-item-picker__item-container,
+.psui-datepicker__month-picker__item-container,
+.psui-datepicker__year-picker__item-container {
+  padding: 15px 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 15px 0px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.psui-datepicker__date-item-picker__item-container {
+  padding: 0px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.psui-datepicker__year-picker__item-container {
+  grid-template-columns: 1fr 1fr;
+}
+
+.psui-datepicker__date-item-picker__item,
+.psui-datepicker__month-picker__item,
+.psui-datepicker__year-picker__item {
+  user-select: none;
+  padding: 10px;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.psui-datepicker__date-item-picker__item {
+  text-align: center;
+  padding: 5px;
+  min-width: 35px;
+  min-height: 20px;
+}
+
+.psui-datepicker__date-item-picker__item:hover,
+.psui-datepicker__month-picker__item:hover,
+.psui-datepicker__year-picker__item:hover {
+  cursor: pointer;
+  @apply psui-border-ps-yellow-50;
+}
+
+.psui-datepicker__date-item-picker__item--greyed {
+  @apply psui-text-ps-black-30;
+}
+
+.psui-datepicker__date-item-picker__item--between {
+  background-color: rgba(255, 193, 16, 0.5);
+}
+
+.psui-datepicker__date-item-picker__item--disabled:hover {
+  cursor: default;
+  @apply psui-border-transparent;
+}
+
+.psui-datepicker__date-item-picker__item--selected,
+.psui-datepicker__month-picker__item--selected,
+.psui-datepicker__year-picker__item--selected {
+  @apply psui-bg-ps-yellow-50 psui-text-ps-black-100;
+}
+
+.psui-datepicker__date-item-picker__header__prev-button,
+.psui-datepicker__date-item-picker__header__next-button,
+.psui-datepicker__year-picker__header__prev-button,
+.psui-datepicker__year-picker__header__next-button {
+  user-select: none;
+  background-color: transparent;
+}
+
+.psui-datepicker__date-item-picker__header__prev-button:hover,
+.psui-datepicker__date-item-picker__header__next-button:hover,
+.psui-datepicker__year-picker__header__prev-button:hover,
+.psui-datepicker__year-picker__header__next-button:hover {
+  cursor: pointer;
+}
+
+/* hours minute picker */
+.psui-timepicker__hours-minutes-picker {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.psui-timepicker__hours-minutes-picker__footer-container {
+  padding: 10px;
+  grid-column: 1/3;
+  display: grid;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.psui-timepicker__hours-minutes-picker__footer-container__ok-button {
+  background-color: transparent;
+}
+
+.psui-timepicker__hours-minutes-picker__footer-container__ok-button:hover {
+  cursor: pointer;
+  @apply psui-text-ps-yellow-50;
+}
+
+.psui-timepicker__hours-minutes-picker__hours-items-container,
+.psui-timepicker__hours-minutes-picker__minutes-items-container {
+  display: grid;
+  height: 200px;
+  max-height: 200px;
+  overflow-y: scroll;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  @apply psui-border-ps-black-30;
+}
+
+.psui-timepicker__hours-minutes-picker__minutes-items-container {
+  border-right: none;
+}
+
+.psui-timepicker__hours-minutes-picker__hours-item,
+.psui-timepicker__hours-minutes-picker__minutes-item {
+  background-color: transparent;
+  padding: 10px;
+}
+
+.psui-timepicker__hours-minutes-picker__hours-item:hover,
+.psui-timepicker__hours-minutes-picker__minutes-item:hover {
+  cursor: pointer;
+  @apply psui-bg-ps-yellow-30;
+}
+
+.psui-timepicker__hours-minutes-picker__hours-item--selected,
+.psui-timepicker__hours-minutes-picker__minutes-item--selected {
+  @apply psui-bg-ps-yellow-30;
+}

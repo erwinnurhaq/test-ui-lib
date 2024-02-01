@@ -1,0 +1,44 @@
+.psui-accordion-container {
+  width: 100%;
+}
+
+.psui-accordion-skeleton-item {
+  @apply psui-relative psui-overflow-hidden;
+  margin-bottom: 20px;
+}
+
+.psui-accordion-skeleton-item:last-child {
+  margin-bottom: 0px;
+}
+
+.psui-accordion-skeleton-item::after {
+  @apply psui-skeleton-loading;
+}
+
+.psui-accordion-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 10px 0px;
+  border-bottom: 1px solid transparent;
+  @apply psui-border-ps-black-30;
+}
+
+.psui-accordion-item:first-child {
+  border-top: 1px solid transparent;
+  @apply psui-border-ps-black-30;
+}
+
+.psui-accordion-item-header__icon,
+.psui-accordion-item-header__label {
+  user-select: none;
+}
+
+.psui-accordion-item-header__icon:hover,
+.psui-accordion-item-header__label:hover {
+  cursor: pointer;
+}
+
+.psui-accordion-item-content {
+  margin-top: 10px;
+}

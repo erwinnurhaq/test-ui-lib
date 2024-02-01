@@ -1,0 +1,315 @@
+/*******************************
+              BUTTONS
+ *******************************/
+
+.psui-button-skeleton {
+  @apply psui-inline-flex psui-justify-center psui-items-center psui-w-25 psui-h-10 psui-px-1 psui-py-1 hover:psui-cursor-default psui-outline-none psui-border-2 psui-border-solid psui-border-transparent psui-bg-ps-black-30 psui-relative psui-overflow-hidden;
+}
+
+.psui-button-skeleton::after {
+  @apply psui-skeleton-loading;
+}
+
+.psui-button-common {
+  @apply psui-inline-flex psui-justify-center psui-items-center hover:psui-cursor-pointer psui-outline-none psui-border-2 psui-border-solid;
+}
+
+.psui-button-common-disabled {
+  @apply psui-inline-flex psui-justify-center psui-items-center hover:psui-cursor-default psui-outline-none psui-border-2 psui-border-solid;
+}
+
+.psui-button-size-normal {
+  @apply psui-px-3 psui-py-2 psui-text-base;
+}
+
+.psui-button-size-small {
+  @apply psui-px-3 psui-py-2 psui-text-xs;
+}
+
+.psui-button-text-primary {
+  @apply psui-text-ps-black-100;
+}
+
+.psui-button-text-primary--danger {
+  @apply psui-text-ps-white-20;
+}
+
+.psui-button-common-disabled.psui-button-text-primary--danger {
+  @apply psui-text-ps-white-20;
+}
+
+.psui-button-text-primary-disabled {
+  @apply psui-text-ps-black-40;
+}
+
+.psui-button-text-secondary {
+  @apply psui-text-ps-black-100 hover:psui-text-ps-white-10 focus:psui-text-ps-white-10 active:psui-text-ps-white-10;
+}
+
+.psui-button-text-secondary-disabled {
+  @apply psui-text-ps-black-40;
+}
+
+.psui-button-text-ghost {
+  @apply psui-text-ps-black-100 hover:psui-text-ps-yellow-50 focus:psui-text-ps-yellow-70 active:psui-text-ps-yellow-70;
+}
+
+.psui-button-text-ghost-disabled {
+  @apply psui-text-ps-black-40;
+}
+
+.psui-button-text-iconbtn-disabled {
+  @apply psui-text-ps-black-40;
+}
+
+.psui-button-text-iconbtn {
+  @apply psui-text-ps-yellow-50;
+}
+
+.psui-button-bg-primary {
+  @apply psui-bg-ps-yellow-50 hover:psui-bg-ps-yellow-40 focus:psui-bg-ps-yellow-50 active:psui-bg-ps-yellow-50;
+}
+
+.psui-button-bg-primary--danger {
+  @apply psui-bg-ps-red-50 hover:psui-bg-ps-red-50 focus:psui-bg-ps-red-50 active:psui-bg-ps-red-50;
+}
+
+.psui-button-common-disabled.psui-button-bg-primary--danger {
+  @apply psui-bg-ps-red-20;
+}
+
+.psui-button-bg-primary-disabled {
+  @apply psui-bg-ps-yellow-20;
+}
+
+.psui-button-bg-secondary {
+  @apply psui-bg-transparent hover:psui-bg-ps-blue-90 focus:psui-bg-ps-blue-90 active:psui-bg-ps-blue-90;
+}
+
+.psui-button-bg-secondary-disabled {
+  background-color: rgba(165, 190, 207, 0);
+}
+
+.psui-button-bg-ghost {
+  @apply psui-bg-transparent;
+}
+
+.psui-button-bg-ghost-disabled {
+  @apply psui-bg-transparent;
+}
+
+.psui-button-bg-iconbtn {
+  @apply psui-bg-ps-blue-90;
+}
+
+.psui-button-bg-iconbtn-disabled {
+  @apply psui-bg-ps-black-30;
+}
+
+.psui-button-border-primary {
+  @apply psui-border-transparent focus:psui-border-ps-blue-90 active:psui-border-ps-blue-90;
+}
+
+.psui-button-border-primary--danger {
+  @apply psui-border-transparent focus:psui-border-ps-blue-90 active:psui-border-ps-blue-90;
+}
+
+.psui-button-common-disabled.psui-button-border-primary--danger {
+  @apply psui-border-transparent focus:psui-border-transparent active:psui-border-transparent;
+}
+
+.psui-button-border-primary-disabled {
+  @apply psui-border-transparent;
+}
+
+.psui-button-border-secondary {
+  @apply psui-border-ps-blue-90 focus:psui-border-ps-yellow-50 active:psui-border-ps-yellow-50;
+}
+
+.psui-button-border-secondary-disabled {
+  @apply psui-border-ps-black-30;
+}
+
+.psui-button-border-ghost {
+  @apply psui-border-transparent;
+}
+
+.psui-button-border-ghost-disabled {
+  @apply psui-border-transparent;
+}
+
+/* ================ BUTTON SECONDARY COLOR TYPE VARIANT ================ */
+
+.psui-button-secondary--yellow.psui-button-text-secondary {
+  @apply psui-text-ps-yellow-50 hover:psui-text-ps-white-10 focus:psui-text-ps-white-10 active:psui-text-ps-white-10;
+}
+
+.psui-button-secondary--yellow.psui-button-bg-secondary {
+  @apply psui-bg-transparent hover:psui-bg-ps-yellow-50 focus:psui-bg-ps-yellow-50 active:psui-bg-ps-yellow-50;
+}
+
+.psui-button-secondary--yellow.psui-button-border-secondary {
+  @apply psui-border-ps-yellow-50 focus:psui-border-ps-yellow-50 active:psui-border-ps-yellow-50;
+}
+
+.psui-button-secondary--danger.psui-button-text-secondary {
+  @apply psui-text-ps-red-50 hover:psui-text-ps-white-10 focus:psui-text-ps-white-10 active:psui-text-ps-white-10;
+}
+
+.psui-button-secondary--danger.psui-button-bg-secondary {
+  @apply psui-bg-transparent hover:psui-bg-ps-red-50 focus:psui-bg-ps-red-50 active:psui-bg-ps-red-50;
+}
+
+.psui-button-secondary--danger.psui-button-border-secondary {
+  @apply psui-border-ps-red-50 focus:psui-border-ps-red-50 active:psui-border-ps-red-50;
+}
+
+/* ================ END BUTTON SECONDARY COLOR TYPE VARIANT ================ */
+
+/* ================ BUTTON GHOST COLOR TYPE VARIANT ================ */
+
+.psui-button-ghost--danger.psui-button-text-ghost {
+  @apply psui-text-ps-red-50 hover:psui-text-ps-red-60 focus:psui-text-ps-red-60 active:psui-text-ps-red-70;
+}
+
+.psui-button-ghost--yellow.psui-button-text-ghost {
+  @apply psui-text-ps-yellow-50 hover:psui-text-ps-yellow-60 focus:psui-text-ps-yellow-60 active:psui-text-ps-yellow-70;
+}
+
+/* ================ END BUTTON GHOST COLOR TYPE VARIANT ================ */
+
+.psui-button-border-iconbtn {
+  @apply psui-border-transparent;
+}
+
+.psui-button-border-iconbtn-disabled {
+  @apply psui-border-transparent;
+}
+
+.psui-button-iconbtn__tooltip-container {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+}
+
+.psui-button-iconbtn__tooltip {
+  @apply psui-bg-ps-blue-90 psui-px-3 psui-py-2 psui-rounded-sm;
+  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.32px;
+  color: white;
+  display: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.psui-button-iconbtn__tooltip--bottom::before {
+  @apply psui-border-solid psui-border-ps-blue-90;
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  width: 0;
+  height: 0;
+  border-top: none;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom-width: 8px;
+  display: none;
+}
+
+.psui-button-iconbtn__tooltip--bottom {
+  @apply psui-mt-2;
+  top: 100%;
+}
+
+.psui-button-iconbtn__tooltip--top::before {
+  @apply psui-border-solid psui-border-ps-blue-90;
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  width: 0;
+  height: 0;
+  border-bottom: none;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top-width: 8px;
+  display: none;
+}
+
+.psui-button-iconbtn__tooltip--top {
+  @apply psui-mb-2;
+  bottom: 100%;
+}
+
+.psui-button-iconbtn__tooltip--left::before {
+  @apply psui-border-solid psui-border-ps-blue-90;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(0px, -50%);
+  width: 0;
+  height: 0;
+  border-right: none;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left-width: 8px;
+  display: none;
+}
+
+.psui-button-iconbtn__tooltip--left {
+  @apply psui-mr-2;
+  right: 100%;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
+
+.psui-button-iconbtn__tooltip--right::before {
+  @apply psui-border-solid psui-border-ps-blue-90;
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translate(0px, -50%);
+  width: 0;
+  height: 0;
+  border-left: none;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right-width: 8px;
+  display: none;
+}
+
+.psui-button-iconbtn__tooltip--right {
+  @apply psui-ml-2;
+  left: 100%;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
+
+.psui-button-iconbtn__tooltip-container:hover .psui-button-iconbtn__tooltip {
+  display: block;
+}
+
+.psui-button-iconbtn__tooltip-container:hover .psui-button-iconbtn__tooltip--bottom::before {
+  display: block;
+}
+
+.psui-button-iconbtn__tooltip-container:hover .psui-button-iconbtn__tooltip--top::before {
+  display: block;
+}
+
+.psui-button-iconbtn__tooltip-container:hover .psui-button-iconbtn__tooltip--left::before {
+  display: block;
+}
+
+.psui-button-iconbtn__tooltip-container:hover .psui-button-iconbtn__tooltip--right::before {
+  display: block;
+}

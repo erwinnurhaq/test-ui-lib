@@ -1,0 +1,145 @@
+/* icon card */
+.psui-icon-card {
+  background-color: white;
+  padding: 30px;
+  width: 250px;
+}
+
+.psui-icon-card:hover {
+  cursor: pointer;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.psui-icon-card--disabled {
+  border: 1px solid transparent;
+  @apply psui-border-ps-black-30;
+}
+
+.psui-icon-card--disabled:hover {
+  cursor: default;
+  box-shadow: 0px 0px 0px transparent;
+}
+
+.psui-icon-card-icon {
+  @apply psui-text-ps-black-50;
+}
+
+.psui-icon-card-title {
+  margin: 8px 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.psui-icon-card-body {
+  word-wrap: break-word;
+}
+
+/* image card */
+.psui-image-card {
+  background-color: white;
+  width: 250px;
+}
+
+.psui-image-card:hover {
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.psui-image-card--disabled {
+  border: 1px solid transparent;
+  @apply psui-border-ps-black-30;
+}
+
+.psui-image-card--disabled:hover {
+  box-shadow: 0px 0px 0px transparent;
+}
+
+.psui-image-card-image-container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  @apply psui-bg-ps-black-20;
+}
+
+.psui-image-card-placeholder-image {
+  width: 40px;
+  height: 40px;
+  @apply psui-text-ps-black-30;
+}
+
+.psui-image-card-image-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.psui-image-card-content-container {
+  padding: 20px 30px;
+  border-bottom: 1px solid transparent;
+  @apply psui-border-ps-blue-10;
+}
+
+.psui-image-card-title {
+  margin: 8px 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.psui-image-card-body {
+  word-wrap: break-word;
+}
+
+.psui-image-card-button-container {
+  padding: 30px;
+  text-align: right;
+}
+
+/* transaction card */
+.psui-transaction-card {
+  background-color: white;
+  width: 600px;
+}
+
+.psui-transaction-card:hover {
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.psui-transaction-card--disabled {
+  border: 1px solid transparent;
+  @apply psui-border-ps-black-30;
+}
+
+.psui-transaction-card--disabled:hover {
+  box-shadow: 0px 0px 0px transparent;
+}
+
+.psui-transaction-card-header {
+  padding: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @apply psui-bg-ps-white-20;
+}
+
+.psui-transaction-card-content {
+  padding: 30px;
+}
+
+.psui-transaction-card-title {
+  margin: 8px 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.psui-transaction-card-body {
+  word-wrap: break-word;
+}
+
+.psui-transaction-card-button-container {
+  padding: 30px;
+  padding-top: 0px;
+  text-align: right;
+}

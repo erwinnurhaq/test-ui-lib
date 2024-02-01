@@ -1,0 +1,53 @@
+.psui-progress-indicator-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.psui-progress-indicator__circle-line-container {
+  height: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.psui-progress-indicator__circle {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  @apply psui-border-ps-black-30 psui-rounded-full;
+}
+
+.psui-progress-indicator__line {
+  width: 100%;
+  height: 2px;
+  @apply psui-bg-ps-black-30;
+}
+
+.psui-progress-indicator__text {
+  padding-right: 20px;
+}
+
+.psui-progress-indicator__circle--completed {
+  @apply psui-border-ps-blue-90 psui-bg-ps-blue-90 psui-text-ps-yellow-50;
+}
+
+.psui-progress-indicator__line--completed {
+  @apply psui-bg-ps-blue-90;
+}
+
+.psui-progress-indicator__circle--current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @apply psui-border-ps-blue-90 psui-bg-transparent;
+}
+
+.psui-progress-indicator__circle--current--inner-circle {
+  width: 10px;
+  height: 10px;
+  @apply psui-bg-ps-blue-90 psui-rounded-full;
+}

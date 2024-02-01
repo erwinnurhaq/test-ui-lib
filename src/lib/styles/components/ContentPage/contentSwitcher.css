@@ -1,0 +1,112 @@
+.psui-content-switcher {
+  display: flex;
+  user-select: none;
+}
+
+.psui-content-switcher-skeleton {
+  display: flex;
+  user-select: none;
+  width: 18rem;
+  height: 3rem;
+  background-color: #a5becf;
+  border: 2px solid #a5becf;
+  @apply psui-rounded-sm psui-relative psui-overflow-hidden;
+}
+
+.psui-content-switcher-skeleton::after {
+  @apply psui-skeleton-loading;
+}
+
+.psui-content-switcher-item {
+  text-align: center;
+  min-width: 7rem;
+  border: 2px solid transparent;
+  border-right: none;
+  @apply psui-border-ps-blue-90;
+}
+
+.psui-content-switcher-item:first-of-type {
+  @apply psui-rounded-l-md;
+}
+
+.psui-content-switcher-item:last-of-type {
+  border-right: 2px solid transparent;
+  @apply psui-border-ps-blue-90 psui-rounded-r-md;
+}
+
+.psui-content-switcher-item:focus {
+  box-shadow: 0px 0px 0px 2px #ffc110;
+  clip-path: inset(-2px 0px -2px 0px);
+  outline: none;
+}
+
+.psui-content-switcher-item:first-of-type:focus {
+  box-shadow: 0px 0px 0px 2px #ffc110;
+  clip-path: inset(-2px 0px -2px -2px);
+}
+
+.psui-content-switcher-item:last-of-type:focus {
+  box-shadow: 0px 0px 0px 2px #ffc110;
+  clip-path: inset(-2px -2px -2px 0px);
+}
+
+.psui-content-switcher-item:hover {
+  cursor: pointer;
+}
+
+.psui-content-switcher-item--disabled,
+.psui-content-switcher-item--disabled:first-of-type,
+.psui-content-switcher-item--disabled:last-of-type {
+  @apply psui-text-ps-black-40 hover:psui-text-ps-black-40 psui-border-ps-black-30;
+}
+
+.psui-content-switcher-item--disabled:hover {
+  cursor: default;
+}
+
+.psui-content-switcher-item--active {
+  text-align: center;
+  min-width: 7rem;
+  border: 2px solid transparent;
+  border-right: none;
+  @apply psui-border-ps-blue-90 psui-bg-ps-yellow-50;
+}
+
+.psui-content-switcher-item--active:first-of-type {
+  @apply psui-rounded-l-md;
+}
+
+.psui-content-switcher-item--active:last-of-type {
+  border-right: 2px solid transparent;
+  @apply psui-border-ps-blue-90 psui-rounded-r-md;
+}
+
+.psui-content-switcher-item--active:focus {
+  box-shadow: 0px 0px 0px 2px #ffc110;
+  clip-path: inset(-2px 0px -2px 0px);
+  outline: none;
+}
+
+.psui-content-switcher-item--active:first-of-type:focus {
+  box-shadow: 0px 0px 0px 2px #ffc110;
+  clip-path: inset(-2px 0px -2px -2px);
+}
+
+.psui-content-switcher-item--active:last-of-type:focus {
+  box-shadow: 0px 0px 0px 2px #ffc110;
+  clip-path: inset(-2px -2px -2px 0px);
+}
+
+.psui-content-switcher-item--active:hover {
+  cursor: pointer;
+}
+
+.psui-content-switcher-item--active--disabled,
+.psui-content-switcher-item--active--disabled:first-of-type,
+.psui-content-switcher-item--active--disabled:last-of-type {
+  @apply psui-text-ps-black-40 hover:psui-text-ps-black-40 psui-border-ps-black-30 psui-bg-ps-black-30;
+}
+
+.psui-content-switcher-item--active--disabled:hover {
+  cursor: default;
+}

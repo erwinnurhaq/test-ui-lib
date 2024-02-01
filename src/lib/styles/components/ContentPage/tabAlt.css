@@ -1,0 +1,49 @@
+.psui-tab-alt-container {
+  width: 100%;
+}
+.psui-tab-alt__tab-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.psui-tab-alt__tab-items {
+  display: flex;
+  align-items: center;
+}
+.psui-tab-alt__tab-item {
+  outline: none;
+  background: transparent;
+  color: inherit;
+  transition: color 0.1s ease;
+  padding: 1rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.psui-tab-alt__tab-item[disabled] {
+  pointer-events: none;
+}
+.psui-tab-alt__tab-item.psui-tab-alt__tab-item--active {
+  border-bottom: 2px solid #ffc110;
+  color: #ffc110;
+}
+.psui-tab-alt__tab-item[disabled].psui-tab-alt__tab-item--active {
+  border-bottom: 2px solid #ffeaab;
+  color: #ffeaab;
+}
+.psui-tab-alt__tab-divider {
+  width: 100%;
+  margin-top: -2px;
+  margin-bottom: 1rem;
+  border-top: 1px solid rgba(0, 33, 67, 0.15);
+}
+.psui-tab-alt__tab-content {
+  width: 100%;
+}
+.psui-tab-alt__tab-content.psui-tab-alt-container--no-border .psui-tab-alt__tab-item {
+  border: none;
+}
+.psui-tab-alt__tab-content.psui-tab-alt-container--no-border
+  .psui-tab-alt__tab-item.psui-tab-alt__tab-item--active {
+  border-bottom: none;
+}

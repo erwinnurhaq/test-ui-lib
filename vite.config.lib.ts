@@ -4,7 +4,6 @@ import { glob } from 'glob';
 import { defineConfig } from 'vite';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
 import react from '@vitejs/plugin-react';
-import dts from 'vite-plugin-dts';
 import pkg from './package.json';
 
 // https://vitejs.dev/config/
@@ -22,7 +21,6 @@ export default defineConfig({
       },
     }),
     libInjectCss(),
-    dts({ include: ['src/lib'] }),
   ],
   build: {
     emptyOutDir: true,
@@ -34,10 +32,10 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: ['react', /^react-icons/],
+      external: ['react', 'react-dom', /^react-icons/, /^@fortawesome/],
       input: Object.fromEntries(
         glob
-          .sync('src/lib/**/*.{ts,tsx}', {
+          .sync('src/lib/**/*.{js,jsx,ts,tsx}', {
             ignore: ['src/lib/**/*.stories.tsx'],
           })
           .map((file) => [

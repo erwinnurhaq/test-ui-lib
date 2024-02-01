@@ -1,0 +1,123 @@
+.psui-breadcrumb {
+  line-height: 1;
+  display: inline-block;
+  margin-left: 0 0;
+  vertical-align: middle;
+  font-size: 1em;
+}
+
+.psui-breadcrumb-section {
+  display: inline-block;
+  margin-left: 0;
+  padding: 0;
+  color: #869ba9;
+}
+
+.psui-breadcrumb-section.psui-breadcrumb-clickable {
+  cursor: pointer;
+  color: #2284e7;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.psui-breadcrumb-section.psui-breadcrumb-clickable:hover {
+  color: #1c66b0;
+}
+
+.psui-breadcrumb-section.psui-breadcrumb-active {
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
+
+.psui-breadcrumb-divider {
+  display: inline-block;
+  opacity: 0.7;
+  margin: 0 1em 0;
+  color: #869ba9;
+  vertical-align: baseline;
+}
+
+.psui-breadcrumb-divider.psui-breadcrumb-slash {
+  font-size: 1em;
+}
+
+.psui-breadcrumb-divider.psui-breadcrumb-arrow {
+  font-size: 0.67em;
+}
+
+.psui-breadcrumb-more {
+  left: -1em;
+  padding: 0 !important;
+}
+
+.psui-breadcrumb-more::before {
+  left: 20% !important;
+}
+
+.psui-breadcrumb-more-icon {
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.psui-breadcrumb-more-section {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.psui-breadcrumb-more-section-item {
+  font-size: 1em;
+  padding: 8px 0 8px 16px;
+  text-align: left;
+  min-width: 120px;
+  letter-spacing: 1px;
+}
+
+.psui-breadcrumb-more-section-item.psui-breadcrumb-clickable {
+  cursor: pointer;
+}
+
+.psui-breadcrumb-more-section-item.psui-breadcrumb-disabled {
+  color: #869ba9;
+}
+
+.psui-breadcrumb-more-section-item.psui-breadcrumb-clickable:hover {
+  background-color: #ffc110;
+}
+
+.psui-breadcrumb-loading {
+  background-color: #a5becf;
+  height: 1em;
+  width: 50%;
+  position: relative;
+}
+
+.psui-breadcrumb-loading::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(transparent),
+    color-stop(rgba(255, 255, 255, 0.3)),
+    to(transparent)
+  );
+
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+
+  /* Adding animation */
+  animation: psui-breadcrumb-loading 0.8s infinite;
+}
+
+/* Loading Animation */
+@keyframes psui-breadcrumb-loading {
+  100% {
+    transform: translateX(100%);
+  }
+}

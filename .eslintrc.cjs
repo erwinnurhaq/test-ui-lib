@@ -8,7 +8,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:storybook/recommended',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', '!.storybook'],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
   overrides: [
@@ -27,5 +27,6 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'storybook/no-redundant-story-name': 'off'
   },
 };

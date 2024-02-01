@@ -1,0 +1,19 @@
+.psui-link-group {
+  display: flex;
+  align-items: center;
+}
+
+.psui-link-group .psui-link {
+  margin-right: 15px;
+}
+
+.psui-link-group--vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.psui-link-group--vertical .psui-link {
+  margin-right: 0px;
+}

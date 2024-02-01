@@ -1,0 +1,52 @@
+.psui-tab {
+  display: flex;
+  flex-wrap: wrap;
+  user-select: none;
+}
+
+.psui-tab-item {
+  min-width: 6.25rem;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  @apply psui-p-2 psui-text-ps-black-100 hover:psui-text-ps-black-50;
+}
+
+.psui-tab-item div {
+  border: 1px solid transparent;
+}
+
+.psui-tab-item:hover {
+  cursor: pointer;
+}
+
+.psui-tab-item--disabled {
+  @apply psui-text-ps-black-40 hover:psui-text-ps-black-40;
+}
+
+.psui-tab-item--disabled:hover {
+  cursor: default;
+}
+
+.psui-tab-item--active {
+  min-width: 6.25rem;
+  text-align: center;
+  border-bottom: 2px solid black;
+  @apply psui-p-2  psui-text-ps-black-100;
+}
+
+.psui-tab-item--active div {
+  font-weight: 700;
+}
+
+.psui-tab-item--active:hover {
+  cursor: pointer;
+}
+
+.psui-tab-item--active--disabled {
+  border-bottom: 2px solid transparent;
+  @apply psui-text-ps-black-40 psui-border-ps-black-40;
+}
+
+.psui-tab-item--active--disabled div {
+  font-weight: 400;
+}

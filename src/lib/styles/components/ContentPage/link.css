@@ -1,0 +1,15 @@
+.psui-link {
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: underline;
+  border: 1px solid transparent;
+  outline: none;
+  @apply psui-bg-transparent psui-text-ps-blue-50 hover:psui-text-ps-black-100 psui-border-transparent focus:psui-border-ps-yellow-50 hover:psui-cursor-pointer;
+}
+
+.psui-link--disabled {
+  text-decoration: none;
+  pointer-events: none;
+  @apply psui-text-ps-black-40 hover:psui-text-ps-black-40 focus:psui-border-transparent hover:psui-cursor-default;
+}

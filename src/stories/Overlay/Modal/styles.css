@@ -1,0 +1,47 @@
+.storybook-modal-short {
+  min-height: 250px !important;
+}
+
+.storybook-modal-short-width {
+  max-width: 350px !important;
+  min-height: 400px !important;
+}
+
+.storybook-modal-optional-title {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #030303;
+  margin-bottom: 0.25rem;
+}
+
+.storybook-modal-title {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  color: #5a6872;
+  margin-bottom: 1rem;
+}
+
+.storybook-modal-content {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #030303;
+  margin-bottom: 2rem;
+}
+
+.storybook-modal-important {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #030303;
+}

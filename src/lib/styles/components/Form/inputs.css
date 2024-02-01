@@ -1,0 +1,350 @@
+/* ******************************
+              RADIO
+ *******************************/
+
+.psui-radio-parent {
+  display: inline-flex;
+  align-items: center;
+}
+.psui-radio-parent:hover .psui-radio-input:not(:disabled) {
+  box-shadow: 0 0 0 3px #ffc110;
+}
+.psui-radio-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 21px;
+  height: 21px;
+  outline: none;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  border: 2px solid #002143;
+  border-radius: 50%;
+  background: #fff;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+}
+.psui-radio-input::after {
+  content: '';
+  display: block;
+  left: 1px;
+  top: 1px;
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.2s;
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #002143;
+  transform: scale(1);
+}
+.psui-radio-input:checked {
+  transition: transform 0.6s cubic-bezier(0.2, 0.85, 0.32, 1.2), opacity 0.3s;
+}
+.psui-radio-input:checked::after {
+  opacity: 1;
+  transform: scale(0.7);
+}
+.psui-radio-input:disabled {
+  border-color: #a5becf;
+  cursor: default;
+  opacity: 0.9;
+}
+.psui-radio-input:disabled:checked::after {
+  background: #a5becf;
+}
+.psui-radio-input:focus {
+  box-shadow: 0 0 0 3px #ffc110;
+}
+.psui-radio-input + label {
+  user-select: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 8px;
+  letter-spacing: 0.4px;
+  font-family: 'Roboto', sans-serif;
+}
+.psui-radio-input:disabled + label {
+  @apply psui-text-ps-black-30;
+  cursor: default;
+}
+
+.psui-radio-parent.psui-radio-parent--yellow:hover .psui-radio-input:not(:disabled) {
+  box-shadow: 0 0 0 3px #ffeaab;
+}
+.psui-radio-parent.psui-radio-parent--yellow .psui-radio-input:not(:disabled) {
+  border: 2px solid #002143;
+}
+.psui-radio-parent.psui-radio-parent--yellow .psui-radio-input::after {
+  background: #ffc110;
+}
+.psui-radio-parent.psui-radio-parent--yellow .psui-radio-input:checked {
+  border: 2px solid #ffc110;
+}
+.psui-radio-parent.psui-radio-parent--yellow .psui-radio-input:focus {
+  box-shadow: 0 0 0 3px #ffeaab;
+}
+.psui-radio-parent.psui-radio-parent--yellow .psui-radio-input:disabled:after {
+  background: #ffeaab;
+}
+.psui-radio-parent.psui-radio-parent--yellow .psui-radio-input:disabled:checked {
+  border: 2px solid #ffeaab;
+}
+
+/* ******************************
+              TOGGLE
+ *******************************/
+
+.psui-toggle-parent {
+  display: inline-flex;
+  align-items: center;
+  --psui-toggle-input-width: 36px;
+  --psui-toggle-input-height: 24px;
+  --psui-toggle-circle-size: 18px;
+}
+.psui-toggle-parent:hover .psui-toggle-input:not(:disabled) {
+  box-shadow: 0 0 0 2px #ffc110;
+}
+.psui-toggle-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: var(--psui-toggle-input-width);
+  height: var(--psui-toggle-input-height);
+  outline: none;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  border: 2px solid #002143;
+  border-radius: 11px;
+  background: #002143;
+  box-shadow: 0 0 0 3px transparent;
+}
+.psui-toggle-input::after {
+  content: '';
+  display: block;
+  left: 1px;
+  top: 1px;
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.2s;
+
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  transform: translateX(0);
+}
+.psui-toggle-input:checked {
+  transition: transform 0.6s cubic-bezier(0.2, 0.85, 0.32, 1.2), opacity 0.3s;
+}
+.psui-toggle-input:checked::after {
+  transform: translateX(12px);
+}
+.psui-toggle-input:disabled {
+  border-color: #a5becf;
+  background: #a5becf;
+  cursor: default;
+  opacity: 0.6;
+}
+.psui-toggle-input:disabled::after {
+  opacity: 0.9;
+}
+.psui-toggle-input:disabled:checked::after {
+  background: #fff;
+}
+.psui-toggle-input:focus {
+  box-shadow: 0 0 0 2px #ffc110;
+}
+.psui-toggle-input + label {
+  user-select: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 8px;
+  letter-spacing: 0.4px;
+  font-family: 'Roboto', sans-serif;
+}
+.psui-toggle-input:disabled + label {
+  @apply psui-text-ps-black-30;
+  cursor: default;
+}
+
+/* ==================== TOGGLE VARIANT ==================== */
+.psui-toggle-parent.psui-toggle-parent--yellow:hover .psui-toggle-input:not(:disabled) {
+  box-shadow: 0 0 0 2px #ffeaab;
+}
+.psui-toggle-parent.psui-toggle-parent--yellow .psui-toggle-input:not(:disabled) {
+  border: 2px solid #bbbbbb;
+  background: #bbbbbb;
+}
+.psui-toggle-parent.psui-toggle-parent--yellow .psui-toggle-input:not(:disabled):checked {
+  border: 2px solid #ffc110;
+  background: #ffc110;
+}
+.psui-toggle-parent.psui-toggle-parent--yellow .psui-toggle-input:focus {
+  box-shadow: 0 0 0 2px #ffeaab;
+}
+
+.psui-toggle-parent.psui-toggle-parent--label-inside {
+  position: relative;
+}
+.psui-toggle-parent.psui-toggle-parent--label-inside .psui-toggle-input {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+}
+.psui-toggle-parent.psui-toggle-parent--label-inside .psui-toggle-input::after {
+  top: 2px;
+  left: 2px;
+  width: calc(var(--psui-toggle-circle-size) + 4px);
+  height: calc(var(--psui-toggle-circle-size) + 4px);
+  transition: all 0.3s ease, opacity 0.2s;
+}
+.psui-toggle-parent.psui-toggle-parent--label-inside .psui-toggle-input:checked::after {
+  left: calc(100% - var(--psui-toggle-circle-size) - 4px - 2px);
+  transform: translateX(0);
+}
+.psui-toggle-parent.psui-toggle-parent--label-inside label {
+  z-index: 1;
+  width: 100%;
+  min-width: 6rem;
+  margin: 0;
+  padding-left: 35px;
+  padding-right: 15px;
+  font-size: 0.75rem;
+  color: #ffffff;
+  text-align: right;
+  transition: all 0.3s ease, opacity 0.2s;
+}
+.psui-toggle-parent.psui-toggle-parent--label-inside.psui-toggle-parent--checked label {
+  padding-left: 15px;
+  padding-right: 35px;
+  color: #ffffff;
+  text-align: left;
+}
+.psui-toggle-parent.psui-toggle-parent--label-inside.psui-toggle-parent--yellow label {
+  color: #1f2122;
+}
+.psui-toggle-parent.psui-toggle-parent--label-inside.psui-toggle-parent--yellow.psui-toggle-parent--checked
+  label {
+  color: #ffffff;
+}
+
+/* ******************************
+              CHECKBOX
+ *******************************/
+
+.psui-checkbox-parent {
+  display: inline-flex;
+  align-items: center;
+}
+.psui-checkbox-parent:hover .psui-checkbox-input:not(:disabled) {
+  box-shadow: 0 0 0 2px #ffc110;
+}
+.psui-checkbox-input {
+  flex-shrink: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  outline: none;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid #8c9ba5;
+  background: #fff;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+}
+.psui-checkbox-input:not(.indeterminate)::after {
+  content: '';
+  display: block;
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.2s;
+  width: 6px;
+  height: 11px;
+  border: 2px solid #002143;
+  border-top: 0;
+  border-left: 0;
+  left: 5px;
+  top: 0px;
+  transform: rotate(20deg);
+  opacity: 0;
+}
+.psui-checkbox-input:not(.indeterminate):checked::after {
+  transform: rotate(43deg);
+}
+.psui-checkbox-input:checked::after {
+  border-color: #ffc110;
+  opacity: 1;
+}
+.psui-checkbox-input:checked {
+  border-color: #002143;
+  background: #002143;
+  transition: transform 0.6s cubic-bezier(0.2, 0.85, 0.32, 1.2), opacity 0.3s;
+}
+.psui-checkbox-input:not(.indeterminate):disabled {
+  border-color: #a5becf;
+  cursor: default;
+  opacity: 0.9;
+}
+.psui-checkbox-input:disabled:checked {
+  background: #a5becf;
+}
+.psui-checkbox-input:disabled:checked::after {
+  border-color: #fff;
+}
+.psui-checkbox-input.indeterminate:checked {
+  border-color: #002143;
+  background: #002143;
+}
+.psui-checkbox-input.indeterminate:checked:after {
+  content: '';
+  display: block;
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.2s, width 0.2s, left 0.2s;
+  width: 10px;
+  height: 1px;
+  border: 2px solid #ffc110;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  left: 3px;
+  top: 7px;
+  opacity: 1;
+}
+.psui-checkbox-input.indeterminate:disabled {
+  border-color: #a5becf;
+  background: #a5becf;
+  cursor: default;
+  opacity: 0.9;
+}
+.psui-checkbox-input.indeterminate:disabled::after {
+  border-color: #fff;
+}
+.psui-checkbox-input:focus {
+  box-shadow: 0 0 0 2px #ffc110;
+}
+.psui-checkbox-input + label {
+  user-select: none;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.psui-checkbox-input:disabled + label {
+  @apply psui-text-ps-black-30;
+  cursor: default;
+}
+.psui-checkbox-parent.psui-checkbox-parent--yellow:hover .psui-checkbox-input:not(:disabled) {
+  box-shadow: 0 0 0 2px #ffeaab;
+}
+.psui-checkbox-parent.psui-checkbox-parent--yellow .psui-checkbox-input:checked::after {
+  border-color: #ffffff;
+}
+.psui-checkbox-parent.psui-checkbox-parent--yellow .psui-checkbox-input:checked {
+  border-color: #ffc110;
+  background: #ffc110;
+}
+.psui-checkbox-parent.psui-checkbox-parent--yellow .psui-checkbox-input:checked:disabled {
+  border-color: #ffeaab;
+  background: #ffeaab;
+}
+.psui-checkbox-parent.psui-checkbox-parent--yellow .psui-checkbox-input:focus {
+  box-shadow: 0 0 0 2px #ffeaab;
+}

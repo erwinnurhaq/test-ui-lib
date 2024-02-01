@@ -1,0 +1,57 @@
+.psui-upload .psui-upload-title {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.psui-upload .psui-upload-subTitle {
+  color: #5a6872;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.psui-upload .psui-upload-button {
+  display: block;
+}
+
+.psui-upload input {
+  display: none;
+}
+
+.psui-upload .psui-upload-file {
+  background-color: #ffc110;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 200px;
+  max-width: 320px;
+  margin-top: 1em;
+  padding: 6px 1em;
+}
+
+.psui-upload .psui-upload-file p {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: default;
+  width: 90%;
+}
+
+.psui-upload .psui-upload-file-icon:not(.psui-upload-file-icon-disabled) {
+  cursor: pointer;
+  color: #5a6872;
+  @apply psui-text-ps-black-50;
+  font-size: 18px;
+}
+
+.psui-upload .psui-upload-file-icon-disabled {
+  @apply psui-text-ps-black-30;
+  cursor: default;
+  font-size: 18px;
+}
+
+.psui-upload .psui-upload-file-icon:hover:not(.psui-upload-file-icon-disabled) {
+  color: #798d9c;
+  @apply psui-text-ps-black-40;
+}

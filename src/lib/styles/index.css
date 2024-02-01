@@ -1,0 +1,35 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+@import './tailwindsConfig/common.css';
+@import './tailwindsConfig/types.css';
+
+@import './components/NotCategorized/badges.css';
+@import './components/NotCategorized/breadcrumb.css';
+@import './components/NotCategorized/avatar.css';
+@import './components/NotCategorized/card.css';
+
+@import './components/Buttons/buttons.css';
+
+@import './components/ContentPage/accordion.css';
+@import './components/ContentPage/contentSwitcher.css';
+@import './components/ContentPage/progressIndicator.css';
+@import './components/ContentPage/tab.css';
+@import './components/ContentPage/tabAlt.css';
+@import './components/ContentPage/overflowMenu.css';
+@import './components/ContentPage/link.css';
+@import './components/ContentPage/linkGroup.css';
+@import './components/ContentPage/pagination.css';
+
+@import './components/Overlay/dimmer.css';
+@import './components/Overlay/modal.css';
+@import './components/Overlay/tooltip.css';
+
+@import './components/Form/inputs.css';
+@import './components/Form/slider.css';
+@import './components/Form/select.css';
+@import './components/Form/textInput.css';
+@import './components/Form/datepicker.css';
+@import './components/Form/upload.css';
+
+@import 'tailwindcss/utilities';

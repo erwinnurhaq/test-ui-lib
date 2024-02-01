@@ -1,0 +1,181 @@
+.psui-pagination-container {
+  @apply psui-flex psui-text-ps-black-50;
+}
+
+.psui-pagination-wrapper {
+  @apply psui-flex psui-items-center psui-w-full psui-h-10 psui-bg-ps-white-10;
+  border: 1px solid #dfe3e6;
+}
+
+.psui-pagination-wrapper-col {
+  @apply psui-flex psui-items-center;
+}
+
+.psui-pagination-wrapper-divider {
+  @apply psui-h-4 psui-w-px psui-border-0 psui-border-r psui-border-solid psui-border-ps-black-50;
+}
+
+.psui-pagination-disabled .psui-pagination-wrapper-divider {
+  @apply psui-border-ps-black-30;
+}
+
+.psui-pagination-standalone {
+  @apply psui-w-auto psui-bg-transparent;
+  border: none;
+}
+
+.psui-pagination-container:not(.psui-pagination-multiple)
+  .psui-pagination-wrapper:not(.psui-pagination-standalone) {
+  border-right: none;
+}
+
+/* PAGINATION NUMBER BUTTON */
+
+.psui-pagination-number-button {
+  @apply psui-h-6 psui-my-0 psui-mx-2 psui-bg-transparent psui-cursor-pointer psui-text-sm;
+  min-width: 1.5rem;
+  outline: none;
+  border: none;
+}
+
+.psui-pagination-number-button:disabled {
+  @apply psui-cursor-default;
+}
+
+.psui-pagination-number-button:enabled:hover {
+  @apply psui-text-ps-white-10 psui-bg-ps-blue-50;
+  /* background-color: rgb(61, 112, 178); */
+}
+
+.psui-pagination-number-button-active {
+  @apply psui-bg-ps-yellow-50;
+}
+
+/* PAGINATION NAV BUTTON */
+
+.psui-pagination-nav-button {
+  @apply psui-w-10 psui-h-10 psui-bg-ps-white-10 psui-p-0 psui-relative psui-cursor-pointer psui-text-xl psui-text-ps-black-50;
+  outline: none;
+  border: 1px solid #dfe3e6;
+}
+
+.psui-pagination-nav-button svg {
+  @apply psui-absolute psui-top-1/2 psui-left-1/2 psui-transform psui--translate-x-1/2 psui--translate-y-1/2;
+}
+
+.psui-pagination-nav-button:disabled {
+  @apply psui-cursor-default psui-text-ps-black-30;
+}
+
+/* PAGINATION ROW LIMIT */
+
+.psui-pagination-row-limit {
+  @apply psui-flex psui-items-center psui-py-0 psui-px-4;
+}
+
+.psui-pagination-row-limit p {
+  @apply psui-pr-3 psui-text-xs;
+}
+
+/* PAGINATION PAGE/ITEM COUNT */
+
+.psui-pagination-page-count,
+.psui-pagination-item-count {
+  @apply psui-text-xs psui-py-0 psui-px-4 psui-m-0;
+}
+
+/* PAGINATION SINGLE */
+
+.psui-pagination-single .psui-pagination-wrapper {
+  @apply psui-justify-end;
+}
+
+.psui-pagination-single .psui-pagination-wrapper .psui-pagination-nav-button:not(:last-child) {
+  border-right: none;
+}
+
+/* PAGINATION MULTIPLE */
+
+.psui-pagination-multiple .psui-pagination-wrapper {
+  @apply psui-justify-end;
+}
+
+.psui-pagination-multiple .psui-pagination-nav-button {
+  @apply psui-w-9 psui-h-9 psui-rounded-full psui-bg-transparent;
+  border: none;
+}
+
+.psui-pagination-multiple .psui-pagination-nav-button:enabled:hover {
+  @apply psui-bg-gray-50;
+}
+
+.psui-pagination-multiple .psui-overflowmenu-container,
+.psui-pagination-multiple .psui-overflowmenu-trigger {
+  /* OVERRIDE */
+  @apply psui-w-9 psui-h-9;
+}
+
+.psui-pagination-multiple .psui-overflowmenu-icon {
+  /* OVERRIDE */
+  transform: rotate(90deg);
+}
+
+.psui-pagination-multiple .psui-overflowmenu-menu {
+  /* OVERRIDE */
+  @apply psui-top-0 psui-right-1/2 psui-translate-x-1/2 psui-rounded-lg psui-border-ps-black-30;
+  min-width: 2rem;
+  max-height: calc(5 * 1.75rem);
+  overflow: auto;
+}
+
+.psui-pagination-multiple .psui-overflowmenu-menu-item {
+  /* OVERRIDE */
+  @apply psui-h-7 psui-px-1 hover:psui-bg-ps-yellow-50;
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+/* Custom Scrollbar Overflow Menu */
+
+.psui-pagination-multiple .psui-overflowmenu-menu::-webkit-scrollbar-track {
+  @apply psui-bg-transparent;
+}
+
+.psui-pagination-multiple .psui-overflowmenu-menu::-webkit-scrollbar {
+  width: 6px;
+  @apply psui-bg-transparent;
+}
+
+.psui-pagination-multiple .psui-overflowmenu-menu::-webkit-scrollbar-thumb {
+  @apply psui-bg-ps-black-20;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.psui-pagination-multiple .psui-overflowmenu-menu::-webkit-scrollbar-thumb:hover {
+  @apply psui-bg-ps-black-30;
+}
+
+/* PAGINATION BAR */
+
+.psui-pagination-bar .psui-pagination-wrapper {
+  @apply psui-justify-between;
+}
+
+.psui-pagination-bar-page-select-wrapper {
+  @apply psui-flex psui-items-center psui-justify-center psui-h-10;
+  min-width: 3rem;
+  border-top: 1px solid #dfe3e6;
+  border-bottom: 1px solid #dfe3e6;
+}
+
+.psui-pagination-bar-page-select .psui-select-wrapper {
+  min-width: 3rem;
+}
+
+.psui-pagination-bar.psui-pagination-no-bar-border .psui-pagination-wrapper {
+  border: none;
+}

@@ -1,0 +1,68 @@
+.psui-overflowmenu-container {
+  @apply psui-inline-block psui-relative;
+}
+
+.psui-overflowmenu-trigger {
+  @apply psui-flex psui-justify-center psui-items-center psui-w-10 psui-h-10 psui-rounded-full psui-cursor-pointer psui-bg-transparent psui-text-ps-black-50 focus:psui-outline-none hover:psui-bg-gray-50;
+}
+
+.psui-overflowmenu-trigger:disabled,
+.psui-overflowmenu-trigger__open {
+  @apply psui-text-ps-black-30 psui-cursor-default hover:psui-bg-transparent;
+}
+
+.psui-overflowmenu-icon {
+  @apply psui-w-6 psui-h-6;
+}
+
+.psui-overflowmenu-overlay {
+  z-index: 999;
+  @apply psui-w-full psui-h-screen psui-fixed psui-left-0 psui-top-0;
+}
+
+.psui-overflowmenu-menu {
+  z-index: 999;
+  min-width: 180px;
+  @apply psui-absolute psui-py-1 psui-right-0 psui-top-full psui-transform psui-translate-y-1 psui-shadow-md psui-border psui-border-solid psui-border-ps-black-10 psui-bg-ps-white-10;
+}
+
+.psui-overflowmenu-menu::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  right: 20px;
+  transform: translate(50%, 0px);
+  width: 0;
+  height: 0;
+  border-top: none;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #FFFFFF;
+}
+
+.psui-overflowmenu-menu::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  right: 20px;
+  transform: translate(50%, 0px);
+  width: 0;
+  height: 0;
+  border-top: none;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #EBF1F5;
+}
+
+.psui-overflowmenu-menu-divider {
+  @apply psui-m-0 psui-p-0 psui-border-t-0 psui-border-r-0 psui-border-l-0 psui-border-b psui-border-ps-black-20;
+}
+
+.psui-overflowmenu-menu-item {
+  min-width: 180px;
+  @apply psui-type-label psui-tracking-normal psui-block psui-w-full psui-h-9 psui-text-left psui-px-4 psui-bg-transparent psui-whitespace-nowrap psui-cursor-pointer hover:psui-bg-ps-blue-10;
+}
+
+.psui-overflowmenu-menu-item--danger {
+  @apply hover:psui-bg-ps-red-50 hover:psui-text-ps-white-10;
+}

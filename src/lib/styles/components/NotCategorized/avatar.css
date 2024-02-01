@@ -1,0 +1,52 @@
+.psui-avatar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 50%;
+  overflow: hidden;
+  color: white;
+  position: relative;
+}
+.psui-avatar-small {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+}
+.psui-avatar-medium {
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+}
+.psui-avatar-large {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
+.psui-avatar-very-large {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+}
+.psui-avatar > img {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.psui-avatar-icon {
+  font-size: 2em;
+  position: absolute;
+}
+.psui-avatar-fill {
+  background: #5a6872;
+}
+.psui-avatar-fill .psui-avatar-icon {
+  top: 5px;
+}
+.psui-avatar-outline {
+  border: 2px solid black;
+  color: black;
+}
+.psui-avatar-outline .psui-avatar-icon {
+  top: 3px;
+}

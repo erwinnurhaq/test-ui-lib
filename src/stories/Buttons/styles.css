@@ -1,0 +1,4 @@
+.storybook-primary-button-rounded,
+.storybook-secondary-button-rounded {
+  @apply psui-rounded-full;
+}
